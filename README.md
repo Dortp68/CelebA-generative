@@ -1,6 +1,5 @@
 # WGAN-GP-celeba
-generation image from celeba dataset
-
+Pytorch implementation of Wasserstein GAN with Gradient penalty, trained on CelebA dataset.
 Training graph
 
 ![](https://github.com/Dortp68/WGAN-GP-celeba/blob/main/gr.png)
