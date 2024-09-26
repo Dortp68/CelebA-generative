@@ -1,5 +1,5 @@
 # Denoising Diffusion Probabilistic Model
-Implementation of <a href="https://arxiv.org/abs/2006.11239">Denoising Diffusion Probabilistic Model</a> in Pytorch and trained on CelebA dataset. Writed with help of [1](https://github.com/tcapelle/Diffusion-Models-pytorch), [2](https://medium.com/mlearning-ai/enerating-images-with-ddpms-a-pytorch-implementation-cef5a2ba8cb1), [3](https://colab.research.google.com/github/huggingface/notebooks/blob/main/diffusers/training_example.ipynb#scrollTo=e3eb5811-c10b-4dae-a58d-9583c42e7f57)
+Implementation of <a href="https://arxiv.org/abs/2006.11239">Denoising Diffusion Probabilistic Model</a> in Pytorch and trained on CelebA dataset. This implementation was inspired by foloowing sources [1](https://github.com/tcapelle/Diffusion-Models-pytorch), [2](https://medium.com/mlearning-ai/enerating-images-with-ddpms-a-pytorch-implementation-cef5a2ba8cb1), [3](https://colab.research.google.com/github/huggingface/notebooks/blob/main/diffusers/training_example.ipynb#scrollTo=e3eb5811-c10b-4dae-a58d-9583c42e7f57)
 ## Sampling
 ### 1) `"normal"` mode
 ```bash
