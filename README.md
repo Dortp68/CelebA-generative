@@ -1,3 +1,58 @@
+# Denoising Diffusion Probabilistic Model
+## Sampling
+### 1) `"normal"` mode
+```bash
+# e.g.,
+python3 ../sample.py\
+    --mode="normal"\
+    --model_params="....pth
+    --save_path="samples/normal/0.jpg"\
+    --img_size=64\
+    --batch_size=100\
+```
+- <img src="https://github.com/Dortp68/CelebA-generative/blob/main/generated/64%C3%9764_4.jpg" width="450">
+- <img src="https://github.com/Dortp68/CelebA-generative/blob/main/generated/64%C3%9764_6.jpg" width="450">
+### 2) `"interpolation"` mode
+```bash
+# e.g.,
+python3 ../sample.py\
+    --mode="interpolation"\
+    --model_params="....pth
+    --save_path="samples/interpolation/0.jpg"\
+    --img_size=64
+    --data_dir="/Users/jongbeomkim/Documents/datasets/"\
+    --image_idx1=50\
+    --image_idx2=100\
+```
+- `interpolate_at=500`
+    - <img src="https://github.com/Dortp68/CelebA-generative/blob/main/generated/64%C3%9764_from_500_4.jpg" width="700">
+### 3) `"coarse_to_fine"` mode
+```bash
+# e.g.,
+python3 ../sample.py\
+    --mode="coarse_to_fine"\
+    --model_params="....pth
+    --save_path="samples/coarse_to_fine/0.jpg"\
+    --img_size=64
+    --data_dir="/Users/jongbeomkim/Documents/datasets/"\
+    --image_idx1=50\
+    --image_idx2=100\
+```
+- <img src="https://github.com/Dortp68/CelebA-generative/blob/main/generated/coarse_to_fine2.jpg" width="700">
+
+## Evaluation
+```bash
+# e.g.,
+python3 eval.py
+    --ckpt_path=".....pth"\
+    --real_data_dir="../img_align_celeba/"\
+    --gen_data_dir="../ddpm_eval_images/"\
+    --batch_size=32\
+    --n_eval_imgs=28000\
+    --n_cpus=4\ # Optional
+    --padding=1\ # Optional
+    --n_cells=100 # Optional
+```
 # WGAN-GP-celeba
 Pytorch implementation of Wasserstein GAN with Gradient penalty, trained on CelebA dataset.
 Source code and training process are in [notebook](https://github.com/Dortp68/CelebA-generative/blob/main/WGAN-gp%20celeba.ipynb).
