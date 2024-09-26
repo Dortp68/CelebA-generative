@@ -13,7 +13,8 @@ python3 ../train.py\
     --lr=1e-5\
     --n_warmup_steps=10\
     --img_size=64\
-## Sampling
+```
+## Usage
 ### 1) `"normal"` mode
 ```bash
 python3 ../sample.py\
